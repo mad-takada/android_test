@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,7 @@ import butterknife.OnClick;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class FragmentActivityFragment extends Fragment {
+public class OttoActivityFragment extends Fragment {
 
     @BindView(R.id.vid_button) Button button1;
 
@@ -24,12 +23,12 @@ public class FragmentActivityFragment extends Fragment {
 
     private int mClickCount;
 
-    public FragmentActivityFragment() {
+    public OttoActivityFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fragment, container, false);
+        View view = inflater.inflate(R.layout.otto_fragment, container, false);
         ButterKnife.bind(this, view);
         return view;
     }

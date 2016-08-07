@@ -6,12 +6,12 @@ import android.widget.Toast;
 
 import com.squareup.otto.Subscribe;
 
-public class FragmentActivity extends Activity {
+public class OttoActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment);
+        setContentView(R.layout.otto_activity);
     }
 
     @Override
