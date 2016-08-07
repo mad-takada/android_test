@@ -3,7 +3,10 @@ package com.example.myapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindString;
 import butterknife.BindView;
@@ -13,7 +16,8 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.vid_title) TextView title;
-    @BindView(R.id.vie_button) TextView button;
+    @BindView(R.id.vid_button) Button button;
+    @BindView(R.id.vid_image)  ImageView image;
 
     @BindString(R.string.app_name) String app_name;
 
@@ -34,8 +38,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.vie_button)
+    @OnClick(R.id.vid_button)
     public void onClickButton(Button button) {
         button.setText(app_name);
+        if (image != null) {
+            Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").into(image);
+        }
     }
 }
