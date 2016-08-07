@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.support.v4.app.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -36,13 +38,16 @@ public class MainActivity extends AppCompatActivity {
         if (title != null) {
             title.setText("test");
         }
+        button.setText(app_name);
+
+        if (image != null) {
+            Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").into(image);
+        }
     }
 
     @OnClick(R.id.vid_button)
     public void onClickButton(Button button) {
-        button.setText(app_name);
-        if (image != null) {
-            Picasso.with(this).load("http://i.imgur.com/DvpvklR.png").into(image);
-        }
+        Intent intent = new Intent(this, FragmentActivity.class);
+        startActivityForResult(intent,0);
     }
 }
