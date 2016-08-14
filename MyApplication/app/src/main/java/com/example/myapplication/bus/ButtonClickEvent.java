@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.bus;
 
 public class ButtonClickEvent {
     private final int mClickCount;
