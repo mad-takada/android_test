@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.bus;
 
 import com.squareup.otto.Bus;
 
